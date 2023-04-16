@@ -1,0 +1,44 @@
+<!DOCTYPE> 
+<html>
+	<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=lex">
+<style>
+body {
+  font-family: "lex", sans-serif;
+}
+<body style="background-color: lightblue;">
+<style>
+	.centered {
+  margin: 0 auto;
+  width: 500px;
+}
+</style>
+<div class="centered">
+
+<html>
+<body>
+	<div style="margin-top: 25px;">
+	<div class="center">
+		<h1>Calculate Moon Distance</h1>
+		<p>Enter a date to calculate how far away the moon has drifted from the earth:</p>
+		<input type="date" id="dateInput">
+		<button onclick="calculateDistance()">Calculate</button>
+		<p id="result"></p>
+	</div>
+	<script>
+		function calculateDistance() {
+  var dateInput = document.getElementById("dateInput").value;
+  var today = new Date();
+  var inputDate = new Date(dateInput);
+  var millisecondsPerDay = 24 * 60 * 60 * 1000;
+  var days = Math.round(Math.abs((inputDate.getTime() - today.getTime()) / millisecondsPerDay));
+  var distance = days * 0.038; // average distance of the moon from the earth increases by about 0.038 cm per year
+  document.getElementById("result").innerHTML = "The moon has drifted " + distance.toFixed(2) + " cm away from the earth.";
+}
+
+	</script>
+</body>
+</html>
+</div>
+	<div>
+</body>

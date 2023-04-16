@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cat Age Calculator</title>
+</head>
+	<style>
+		body {
+      background-color: #add8e6;
+		}		
+	</style>
+<body>
+	<h1>Cat Age Calculator</h1>
+	<p>Enter your cat's age in human years:</p>
+	<input type="number" id="human-age" min="0">
+	<button onclick="calculateCatAge()">Calculate</button>
+	<p>Your cat's age in cat years is:</p>
+	<p id="cat-age"></p>
+
+	<script>
+		function calculateCatAge() {
+			const humanAge = parseInt(document.getElementById("human-age").value);
+			let catAge = 0;
+			switch (humanAge) {
+				case 0:
+					catAge = "Less than 1 year";
+					break;
+				case 1:
+					catAge = "15 years";
+					break;
+				case 2:
+					catAge = "24 years";
+					break;
+				case 3:
+					catAge = "28 years";
+					break;
+				case 4:
+					catAge = "32 years";
+					break;
+				case 5:
+					catAge = "36 years";
+					break;
+				case 6:
+					catAge = "40 years";
+					break;
+				case 7:
+					catAge = "44 years";
+					break;
+				case 8:
+					catAge = "48 years";
+					break;
+				case 9:
+					catAge = "52 years";
+					break;
+				case 10:
+					catAge = "56 years";
+					break;
+				case 11:
+					catAge = "60 years";
+					break;
+				case 12:
+					catAge = "64 years";
+					break;
+				case 13:
+					catAge = "68 years";
+					break;
+				case 14:
+					catAge = "72 years";
+					break;
+				case 15:
+					catAge = "76 years";
+					break;
+				case 16:
+					catAge = "80 years";
+					break;
+				case 17:
+					catAge = "84 years";
+					break;
+				case 18:
+					catAge = "88 years";
+					break;
+				case 19:
+					catAge = "92 years";
+					break;
+				case 20:
+					catAge = "96 years";
+					break;
+			}
+			document.getElementById("cat-age").textContent = catAge;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<body>
+<head>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+    div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+	  body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin-top: 10px;
+  </style>
+</head>
+	 <head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=lex">
+<style>
+body {
+  font-family: "lex", sans-serif;
+}
+</style>
+</head>
+<div>
+<html>
+	<h1>Exponent Calculation</h1>
+<head>
+  <title>Exponent Calculation</title>
+</head>
+<body>
+  <label for="base">Enter the base:</label>
+  <input type="number" id="base">
+
+  <label for="exponent">Enter the exponent:</label>
+  <input type="number" id="exponent">
+
+  <button onclick="calculate()">Calculate</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      // Get the base and exponent values from the input fields
+      let base = BigInt(document.getElementById("base").value);
+      let exponent = BigInt(document.getElementById("exponent").value);
+
+      // Calculate the result of the power operation
+      let result = base ** exponent;
+
+      // Display the result without exponential notation
+      document.getElementById("result").innerText = result.toString();
+    }
+  </script>
+</body>
+</html>
+</div>
+</body>

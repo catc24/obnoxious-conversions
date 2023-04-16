@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=lex">
+<style>
+body {
+  font-family: "lex", sans-serif;
+}
+  <head>
+    <title>Energy Produced by the Sun</title>
+    <style>
+      body {
+        background-color: lightblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      input[type="date"], input[type="button"] {
+        margin: 10px;
+      }
+      #result {
+        margin-top: 20px;
+        text-align: center;
+      }
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			height: 100vh;
+		}
+    </style>
+  </head>
+  <body>
+   <div class="container">
+      <h1>Energy Produced by the Sun</h1>
+      <form>
+        <label for="date">Enter a date:</label>
+        <input type="date" id="date" name="date">
+        <input type="button" value="Calculate" onclick="calculateEnergy()">
+      </form>
+      <div id="result"></div>
+    </div>
+    <script>
+      function calculateEnergy() {
+        var date = new Date(document.getElementById("date").value);
+        var secondsSinceEpoch = Math.floor(date.getTime() / 1000);
+        var energyProduced = secondsSinceEpoch * 3.8e26;
+        document.getElementById("result").innerHTML = "The sun has produced " + energyProduced.toLocaleString() + " joules of energy since " + date.toLocaleDateString() + ".";
+      }
+    </script>
+  </body>
+</html>

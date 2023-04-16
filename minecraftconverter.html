@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>minecraft language converter</title>
+  <style>
+    img {
+      width: 50px;
+      height: 50px;
+    }
+	   body {
+      background-color: #add8e6;
+    }
+  </style>
+</head>
+<body>
+  <h1>minecraft language converter</h1>
+  <form>
+    <label for="text-input">Enter a line of text:</label>
+    <input type="text" id="text-input">
+    <button type="submit">Show Images</button>
+  </form>
+  <div id="image-container"></div>
+  <script>
+    // Define a dictionary mapping letters to their corresponding images
+    var images = {
+      'a': 'letters/a.png',
+      'b': 'letters/b.png',
+      'c': 'letters/c.png',
+      'd': 'letters/d.png',
+      'e': 'letters/e.png',
+      'f': 'letters/f.png',
+      'g': 'letters/g.png',
+      'h': 'letters/h.png',
+      'i': 'letters/i.png',
+      'j': 'letters/j.png',
+      'k': 'letters/k.png',
+      'l': 'letters/l.png',
+      'm': 'letters/m.png',
+      'n': 'letters/n.png',
+      'o': 'letters/o.png',
+      'p': 'letters/p.png',
+      'q': 'letters/q.png',
+      'r': 'letters/r.png',
+      's': 'letters/s.png',
+      't': 'letters/t.png',
+      'u': 'letters/u.png',
+      'v': 'letters/v.png',
+      'w': 'letters/w.png',
+      'x': 'letters/x.png',
+      'y': 'letters/y.png',
+      'z': 'letters/z.png',
+      'A': 'letters/a.png',
+      'B': 'letters/b.png',
+      'C': 'letters/c.png',
+      'D': 'letters/d.png',
+      'E': 'letters/e.png',
+      'F': 'letters/f.png',
+      'G': 'letters/g.png',
+      'H': 'letters/h.png',
+      'I': 'letters/i.png',
+      'J': 'letters/j.png',
+      'K': 'letters/k.png',
+      'L': 'letters/l.png',
+      'M': 'letters/m.png',
+      'N': 'letters/n.png',
+      'O': 'letters/o.png',
+      'P': 'letters/p.png',
+      'Q': 'letters/q.png',
+      'R': 'letters/r.png',
+      'S': 'letters/s.png',
+      'T': 'letters/t.png',
+      'U': 'letters/u.png',
+      'V': 'letters/v.png',
+      'W': 'letters/w.png',
+      'X': 'letters/x.png',
+      'Y': 'letters/y.png',
+      'Z': 'letters/z.png'
+      // add more mappings as needed
+    };
+    
+    // Register a function to be called when the form is submitted
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var text = document.querySelector('#text-input').value.toLowerCase();
+      var imageContainer = document.getElementById('image-container');
+      imageContainer.innerHTML = '';
+      for (var i = 0; i < text.length; i++) {
+        var letter = text.charAt(i);
+        if (letter in images) {
+          var imageUrl = images[letter];
+          var imageElement = document.createElement('img');
+          imageElement.setAttribute('src', imageUrl);
+          imageContainer.appendChild(imageElement);
+        } else {
+          imageContainer.appendChild(document.createTextNode(letter));
+        }
+      }
+    });
+  </script>
+</body>
+</html>
